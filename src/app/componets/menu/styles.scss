@@ -1,0 +1,83 @@
+@mixin menu ($color,$space){
+    background: $color;
+    padding: $space;
+    box-sizing: border-box;      
+}
+@mixin display($justify,$align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;  
+}
+.menu {   
+    width: 100%;  
+    height: 100%;      
+}
+.menu__title {                  
+    @include display(space-between,center);      
+    @include menu(#081218,15px);
+    height: 70px;
+}
+
+.menu__title-icon{
+    @include display(center,center);  
+    width: 40px;
+    height: 40px;         
+}
+.menu__title-icon:hover{
+    cursor: pointer;
+    background:rgb(255, 255, 255,0.5);
+    border-radius: 10px;
+    transition: 300ms;
+}
+.menu__icon {
+    height: 20px;
+}
+.menu__title-text {   
+    @include display(center,center);    
+    font-weight: bold;
+    font-size: 20px;  
+    color: #B9FFFF;        
+}
+
+
+.menu__info {
+    @include menu(#4B474C,15px);
+    @include display(flex-start,flex-start);
+}
+.menu__user-icon {
+    width: 60px;
+    height: 55px;
+}
+.menu__user-info {      
+    height: 55px;  
+    @include display(space-around,center);
+    flex-direction: column;    
+    flex-grow: 1;   
+    color: white; 
+    font-weight: bold;
+}
+.menu_user-status{    
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-right: 10px;
+    background: #329e38;
+}
+.menu--text-small{
+    font-size: 13px;
+}
+
+.menu__option {
+    @include menu(#233038,15px);   
+    color: white;   
+}
+
+.menu__option-ul{
+    text-decoration: none;
+    list-style: none;  
+}
+
+.menu__option-li {
+    text-decoration: none;
+}

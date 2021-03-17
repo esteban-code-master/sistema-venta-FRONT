@@ -1,0 +1,39 @@
+.header {
+    background: #132730;          
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.header__group-icon{  
+    width: 200px;        
+    list-style: none;        
+    padding: 0px;
+    display: flex;      
+    justify-content:space-around;
+    li {      
+       padding: 10px;       
+    }
+    li:hover{    
+        background: rgb(196,196,196,10%);     
+        cursor: pointer;   
+    }
+}
+.header__icon {
+    width: 30px;        
+}
+
+.header__fecha {
+    color: white;
+    height: auto;
+    font-weight: bold;
+    display: flex;   
+    align-items: center;             
+    font-size: 14px;
+    flex-grow: 1;
+    flex-wrap: nowrap;   
+}
+
+.header__idioma {
+    padding: 10px;
+}
