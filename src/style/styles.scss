@@ -17,6 +17,7 @@
     }
 }
 
+
 .productos__enviar{
     padding: 10px;
     box-sizing: border-box;
@@ -44,4 +45,25 @@
     border: 1px solid black;
     padding: 10px;
     box-sizing: border-box;
+}
+
+.principal {
+    padding: 20px;
+    background: brown;
+
+    input{
+        padding: 10px;
+    }
+    button {
+        padding: 10px;
+        background: cadetblue;
+    }
+}
+
+.categoria {
+    margin: 10px;
+    background: cadetblue;
+    width: 10%;
+    padding: 10px;
+    border: 1px solid black;
 }
