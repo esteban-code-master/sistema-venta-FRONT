@@ -14,6 +14,7 @@ export const ConsultarCategoria = () =>{
                 <p>
             `
         }                          
+        
         document.getElementById('root-template').innerHTML = parrafo;
     })   
     return <div></div>
