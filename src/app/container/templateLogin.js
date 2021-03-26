@@ -25,7 +25,7 @@ const TemplateLogin = () => {
 
     return(
         <React.Fragment>
-            {validate == true? <Redirect to = "/dashboard" /> : null} 
+            {validate == true? <Redirect to = "/app" /> : null} 
             <div className = "container-login">
                 <div className = "login-box card">  
                     <div className = "box">

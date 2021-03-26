@@ -1,22 +1,29 @@
 import React from 'react'
-import {BrowserRouter,Switch,Route} from 'react-router-dom'
+import {BrowserRouter,Switch,Route, Router} from 'react-router-dom'
 import TemplateAdmin from '../app/container/templatePrincipal'
 import TemplateLogin from '../app/container/templateLogin'
 import SwitchRouter from './switchRouter'
 
 const App = () =>{
     return(
-        <BrowserRouter>                     
+        <BrowserRouter>                   
             <Switch>
-                <Route exact path = "/">
-                    <TemplateLogin/>
-                </Route>
-                <Route exact path = "/dashboard">
-                    <TemplateAdmin
-                        Component = {SwitchRouter}            
-                    />
-                </Route>
-            </Switch>
+                <Route 
+                    path = "/" 
+                    exact
+                    component = {TemplateLogin} 
+                />                                       
+                <Route 
+                    path = "/app"
+                    render = {()=>{
+                        return (
+                            <TemplateAdmin>
+                                <SwitchRouter />
+                            </TemplateAdmin>
+                        )
+                    }}
+                />
+        </Switch>                             
         </BrowserRouter>       
     )
 }

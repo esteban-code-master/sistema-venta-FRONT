@@ -1,13 +1,9 @@
 import React from 'react'
 import Menu from '../componets/menu/index'
 import Header from '../componets/header/index'
-
 import './style/index.scss'
 
-const TemplateAdmin = (props) => {
-
-    const {Component} = props
-
+const TemplateAdmin = (props) => {    
     return (
         <div className = "template-admin"> 
             <div className = "template-menu">
@@ -18,7 +14,7 @@ const TemplateAdmin = (props) => {
                     <Header />
                 </div>   
                 <div className = "template-content">
-                    <Component />
+                    {props.children}
                     <div id="root-template">
                     </div>                
                 </div>
