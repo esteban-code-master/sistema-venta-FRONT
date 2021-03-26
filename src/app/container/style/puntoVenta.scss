@@ -1,0 +1,20 @@
+@mixin display ($justify,$align,$direction){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: wrap;
+}
+.contenido{
+    background: #ECF0F5;
+    height: 100vh;
+}
+.menu{   
+}
+
+.menu__buttons{
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    @include display(space-around,center,row)
+}
