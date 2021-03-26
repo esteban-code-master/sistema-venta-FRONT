@@ -1,0 +1,38 @@
+@import 'login';
+
+*{
+    margin: 0;
+}
+.container-login {   
+    height: 100vh;    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "formulario logo";
+}
+
+.login-box {
+    grid-area: formulario;
+}
+.logo-box {
+    grid-area: logo;
+}
+
+@media (max-width: 900px) { 
+
+    .container-login {   
+        height: 100vh;    
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 20px;
+        grid-template-areas: "formulario formulario"
+                            "logo logo";
+    }
+
+    .login-box {
+        grid-area: formulario;
+    }
+    .logo-box {
+        grid-area: logo;      
+    }
+}
