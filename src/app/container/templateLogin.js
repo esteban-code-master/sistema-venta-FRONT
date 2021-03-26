@@ -3,9 +3,11 @@ import IconLogin from '../../public/icon/logo.png'
 // import IconSig from '../../public/icon/sig.png'
 import './style/loginEstruct.scss'
 import {login} from '../api/login/index';
+import {Redirect} from 'react-router-dom'
 
 const TemplateLogin = () => {
-
+    const [validate,setValidate] = useState(false)
+    const [showPassword,setShowPassword] = useState(true)
     const [form,setForm] = useState({
         password : null,
         user : null
@@ -17,11 +19,13 @@ const TemplateLogin = () => {
     }
 
     const handleSumbit = async () => {      
-        const token = await login(form)      
+        const token = await login(form)   
+        setValidate(true)
     }
 
     return(
         <React.Fragment>
+            {validate == true? <Redirect to = "/dashboard" /> : null} 
             <div className = "container-login">
                 <div className = "login-box card">  
                     <div className = "box">
@@ -34,11 +38,17 @@ const TemplateLogin = () => {
                             </div>                    
                             <div className = "box__group box--borderActive box__group--text">
                                 <label className = "box__margin" htmlFor ="passwordID" > contraseña</label>
-                                <input className = "box__input" id="passwordID" type="password" placeholder = "- - - - - - - -" name = "password" onChange = {handleChange} />
+                                <input className = "box__input" id="passwordID" type={showPassword? "password":"text"} placeholder = "- - - - - - - -" name = "password" onChange = {handleChange} />
                             </div>    
                             <div className = "box__detail space">                                
                                 <span className = "box__active">                                   
-                                    <input id = "checkboxID" type = "checkbox" />
+                                    <input 
+                                        id = "checkboxID" 
+                                        type = "checkbox"
+                                        onClick = {(e)=>{
+                                           e.target.checked? setShowPassword(false) : setShowPassword(true)                                           
+                                        }}
+                                    />
                                     <label htmlFor = "checkboxID"> Mostrar </label>
                                 </span>
                                 <span className = "box__active">recuperar contraseña ?</span>
