@@ -1,6 +1,6 @@
 import React from 'react'
-import Menu from '../componets/menu/index'
-import Header from '../componets/header/index'
+import Menu from '../../componets/menu/index'
+import Header from '../../componets/header/index'
 import './style/index.scss'
 
 const TemplateAdmin = (props) => {    

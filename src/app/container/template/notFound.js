@@ -1,6 +1,6 @@
 import React from 'react'
 import './style/notFound.scss'
-import IconNotFound from '../../public/icon/404.png'
+import IconNotFound from '../../../public/icon/404.png'
 import {NavLink} from 'react-router-dom'
 
 const NotFound = () => {

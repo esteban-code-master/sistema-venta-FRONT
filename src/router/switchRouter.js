@@ -3,7 +3,7 @@ import {Switch,Route} from 'react-router-dom'
 import { Tabla,Tabla2 } from '../app/views/ejemplo/index'
 import {CategoriaView}  from '../app/views/categoria/index'
 import {ConsultarCategoria} from '../app/views/categoria/consultar'
-import NotFound from '../app/container/notFound'
+import NotFound from '../app/container/template/notFound'
 
 const SwitchRouter = () => {    
     return(       

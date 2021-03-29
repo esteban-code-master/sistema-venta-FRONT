@@ -1,10 +1,10 @@
 import React from 'react'
 import {BrowserRouter,Switch,Route} from 'react-router-dom'
-import TemplateAdmin from '../app/container/templatePrincipal'
-import TemplateLogin from '../app/container/templateLogin'
-import TemplatePuntoVenta from '../app/container/templatePuntoVenta'
+import TemplateAdmin from '../app/container/template/templatePrincipal'
+import TemplateLogin from '../app/container/template/templateLogin'
+import TemplatePuntoVenta from '../app/container/template/templatePuntoVenta'
 import SwitchRouter from './switchRouter'
-import NotFound from '../app/container/notFound'
+import NotFound from '../app/container/template/notFound'
 
 const App = () =>{
     return(

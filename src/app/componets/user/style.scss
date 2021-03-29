@@ -1,0 +1,38 @@
+@mixin menu ($color,$space){
+    background: $color;
+    padding: $space;
+    box-sizing: border-box;      
+}
+@mixin display($justify,$align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;  
+}
+
+.menu__info {
+    @include menu(none,15px);
+    @include display(flex-start,flex-start);
+}
+.menu__user-icon {
+    width: 60px;
+    height: 55px;
+}
+.menu__user-info {      
+    height: 55px;  
+    @include display(space-around,center);
+    flex-direction: column;    
+    flex-grow: 1;   
+    color: black;
+    font-weight: bold;
+}
+.menu_user-status{    
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-right: 10px;
+    background: #329e38;
+}
+.menu--text-small{
+    font-size: 13px;
+}

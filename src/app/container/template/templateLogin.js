@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import IconLogin from '../../public/icon/logo.png'
+import IconLogin from '../../../public/icon/logo.png'
 // import IconSig from '../../public/icon/sig.png'
 import './style/loginEstruct.scss'
-import {login} from '../api/login/index';
+import {login} from '../../api/login/index';
 import {Redirect} from 'react-router-dom'
 
 const TemplateLogin = () => {
