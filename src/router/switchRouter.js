@@ -1,6 +1,7 @@
 import React from 'react'
 import {Switch,Route} from 'react-router-dom'
 import { Tabla,Tabla2 } from '../app/views/ejemplo/index'
+import {Registro} from '../app/views/usuarios/index'
 
 const SwitchRouter = () => {    
     return(
@@ -16,6 +17,9 @@ const SwitchRouter = () => {
             </Route>                                  
             <Route exact path ="/ejemploGET">            
                <Tabla />                              
+            </Route>
+            <Route exact path = "/registro">
+                <Registro/>
             </Route>           
         </Switch> 
     )

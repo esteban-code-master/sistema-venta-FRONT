@@ -4,12 +4,15 @@
     background: cadetblue;
 }
 
-.productos {
+.cuestionario-design {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 10px;
     box-sizing: border-box;
+    label{
+        
+    }
     input {
         width: 100%;
         margin-top: 10px;
@@ -17,12 +20,12 @@
     }
 }
 
-.productos__enviar{
-    padding: 10px;
+.botones{
+    padding: 16px;
     box-sizing: border-box;
     button{
-        width: 100%;
-        padding: 20px;
+        width: 45%;
+        padding: 15px;
         border-radius: 10px;
         outline: none;
         border: none;

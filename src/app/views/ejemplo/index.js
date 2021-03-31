@@ -24,14 +24,14 @@ export const Tabla =  () => {
 export const Tabla2 =  () => { 
     return (
         <div>
-           <div className = "productos" id = "productos">
+           <div className = "cuestionario-design" >
            <input id ="photo" type="text"  name="name" placeholder="ingresa una foto" />
             <input id ="code" type="text"  name="name" placeholder="ingresa un code" />
             <input id ="name" type="text"  name="name" placeholder="ingresa un name" />
             <input id ="descrip" type="text"name ="name" placeholder="ingresa un descripcion" />
             <input id ="price" type="text" name="name" placeholder="ingresa un price" />           
            </div>
-           <div className = "productos__enviar">
+           <div className = "botones">
                 <button onClick ={jalarDataInput} >ENVIAR</button>
            </div>
         </div>
