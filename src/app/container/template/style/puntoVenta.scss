@@ -1,0 +1,49 @@
+@mixin display ($justify,$align,$direction){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: wrap;
+}
+
+@mixin textDecorate ($size) {
+    color: white;
+    font-weight: bold;
+    font-size: $size;
+}
+.contenido{
+    background: #ECF0F5;
+    height: 100vh;
+}
+.menu{   
+    background:blue;  
+}
+
+.menu__buttons{
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    @include display(space-around,center,row)
+}
+.menu__user{
+
+}
+
+
+.cardVenta{
+    background: white;
+    border-top: 5px solid #A52800;
+}
+.cardVenta__pie{
+    text-align: right;
+    background: #848484;
+    padding: 15px;
+    box-sizing: border-box;   
+}
+.cardVenta__total {
+    @include textDecorate(25px) 
+}
+.cardVenta__cantidad{
+    @include textDecorate(40px)
+}
+
