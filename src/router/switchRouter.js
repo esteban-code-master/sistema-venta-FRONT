@@ -12,7 +12,6 @@ const SwitchRouter = () => {
                     dashboard
                 </div>
             </Route>
-
             <Route exact path ="/ejemploPOST">    
                 <div id="root-template"></div>              
                <Tabla2 />                              
@@ -25,9 +24,8 @@ const SwitchRouter = () => {
             </Route> 
             <Route exact  path = "/consultarCategoria" >                                       
                 <ConsultarCategoria />
-            </Route>   
+            </Route> 
         </Switch> 
     )
 }
-
 export default  SwitchRouter
