@@ -1,4 +1,5 @@
 @mixin display ($justify,$align,$direction){
+
     display: flex;
     justify-content: $justify;
     align-items: $align;
@@ -11,39 +12,58 @@
     font-weight: bold;
     font-size: $size;
 }
-.contenido{
-    background: #ECF0F5;
-    height: 100vh;
-}
-.menu{   
-    background:blue;  
-}
 
-.menu__buttons{
-    padding: 10px;
+// .page{
+//   display: flex;
+//   flex-direction: column;
+//   position: fixed;
+//   width: 100%;
+//   height: 100vh;
+// }
+
+
+.page{
+    background: yellow;
     width: 100%;
+    height: 100vh;
     box-sizing: border-box;
-    @include display(space-around,center,row)
+    display: flex;
+    flex-direction: column;
 }
-.menu__user{
-
+.post{
+    background: yellowgreen;    
+    box-sizing: border-box; 
+    flex-grow: 1;    
+    display: flex;   
+    flex-direction: column;
+}
+.post__menu{
+    background: brown;   
+}
+.post__menu-buttons{
+    display: flex;
+}
+.post__cardVenta{     
+    border-top: 5px solid #A52800; 
+    flex-grow: 1;     
+    display: flex;  
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
-
-.cardVenta{
-    background: white;
-    border-top: 5px solid #A52800;
+.post__cardVenta-seccion{          
+    
+    
 }
-.cardVenta__pie{
+.post__cardVenta-pie{    
     text-align: right;
     background: #848484;
     padding: 15px;
-    box-sizing: border-box;   
+    box-sizing: border-box;       
 }
-.cardVenta__total {
+.post__cardVenta-total {
     @include textDecorate(25px) 
 }
-.cardVenta__cantidad{
+.post__cardVenta-cantidad{
     @include textDecorate(40px)
 }
-

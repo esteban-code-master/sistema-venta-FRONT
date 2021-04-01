@@ -2,131 +2,45 @@ import React, { useState } from 'react'
 import '../style.scss'
 
 
-const Table = (props) => {  
-    const {theme,defaultWith} = props
-    const title = [
-        {"col" : "CANTIDAD"},
-        {"col" : "CANTIDAD"},
-        {"col" : "CANTIDAD"},
-        {"col" : "CANTIDAD"},
-        {"col" : "Cvreovmo"},
-        {"col" : "CANTIDAD"},
-        {"col" : "CANTIDAD"},
-        {"col" : "CANTIDAD"},
-        {"col" : "CANTIDAD"},
-        {"col" : "Cvreovmo"},
-        {"col" : "Cvreovmo"},
-        {"col" : "final"},
-    ]
-
-    const row = [        
-        
-        [  
-            {col :"omfop4m"},
-            {col :"omfop4m"},
-            {col :"omfop4m"},          
-            {col :"omfop4m"},   
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},
-        ],
-        [  
-            {col :"omfop4m"},
-            {col :"omfop4m"},
-            {col :"omfop4m"},                        
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},              
-        ],
-        [  
-            {col :"omfop4m"},
-            {col :"omfop4m"},
-            {col :"omfop4m"},                        
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},
-        ],
-        [  
-            {col :"omfop4m"},
-            {col :"omfop4m"},
-            {col :"omfop4m"},                        
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},
-        ],
-        [  
-            {col :"omfop4m"},
-            {col :"omfop4m"},
-            {col :"omfop4m"},                        
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-        ],
-        [  
-            {col :"omfop4m"},
-            {col :"omfop4m"},
-            {col :"omfop4m"},                        
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-            {col :"bmrpmbo rekg mermg ogmpr gmprmgpi mrimge rigme rimgeriomge rimgie rmgerim gio  gmmrigmei rgmiermgimg  rignri ns"},  
-        ],
-           
-    ]
+const Table = (props) => {    
+    const {theme,height,title,row} = props
+    const [tabla,setTable] = useState({
+        title :  title,
+        theme : theme,
+        height : height,
+        row : row
+    })
+   
     return(
-        <React.Fragment>
-            <div className = "tableContainer">
+        <React.Fragment>                     
+            <div className = "tableContainer" style ={{height : tabla.height}}>
                 <table className = "table">
                     <thead className = "table__head">
                         <tr className = "table__rowHead">                            
-                            {            
-                                title.map((name,index)=>[                                    
-                                    <th key = {index}>{name.col}</th>                            
+                            {         
+                                tabla.title?   
+                                tabla.title.map((name,index)=>[                                    
+                                    <th key = {index}>{name.column}</th>                            
                                 ])
+                                :null
                             }                                                           
                         </tr>
                     </thead>                        
-                    <tbody className = {`table__body ${theme}`}>
+                    <tbody className = {`table__body ${tabla.theme}`}>
                         {
-                            row.map((name,index)=>[
+                            tabla.row?
+                            tabla.row.map((column,index)=>[
                                 <tr key = {index}>
                                     {
-                                        name.map((col)=>[
-                                            <td>
-                                                {col.col}
+                                        column.map((name,index)=>[
+                                            <td key = {index}>
+                                                {name.column}
                                             </td>
                                         ])                                                                                
                                     }
                                 </tr>
                             ])
+                            : null
                         }                        
                     </tbody>               
                 </table>

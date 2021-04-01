@@ -2,6 +2,8 @@ import React from 'react'
 import List from './lista'
 import menuIcon from '../../../public/icon/menu.png'
 import userIcon from '../../../public/img/user.png'
+import UserInfo from '../../componets/user/userInfo'
+
 import './styles.scss'
 
 const Menu = () => {
@@ -14,17 +16,8 @@ const Menu = () => {
                         <img className = "menu__icon" src = {menuIcon}/>
                     </span>                    
                 </div>
-                <div className = "menu__info">
-                   <div>
-                       <img className = "menu__user-icon" src={userIcon}/>
-                   </div>
-                   <div className = "menu__user-info">
-                       <span>Esteban Guzman</span>
-                       <span className ="menu--text-small">
-                           <div className = "menu_user-status"></div>
-                           admin
-                       </span>
-                   </div>
+                <div>
+                    <UserInfo background = "#4B474C" color ="white" />
                 </div>
                 <div className = "menu__option">
                     <ul className = "menu__option-ul">

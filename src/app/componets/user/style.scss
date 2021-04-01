@@ -22,7 +22,7 @@
     @include display(space-around,center);
     flex-direction: column;    
     flex-grow: 1;   
-    color: black;
+    color: white;
     font-weight: bold;
 }
 .menu_user-status{    
@@ -30,7 +30,7 @@
     height: 10px;
     border-radius: 10px;
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 10px;  
     background: #329e38;
 }
 .menu--text-small{
