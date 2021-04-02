@@ -6,6 +6,7 @@ import IconPagar from '../../../public/icon/pagar.png'
 import UserInfo from '../../componets/user/userInfo'
 import Table from '../../componets/utils/table'
 import Button from '../../componets/utils/buttons/index'
+import Search from '../../componets/utils/search/index'
 
 import './style/puntoVenta.scss'
 
@@ -38,6 +39,7 @@ const TemplatePuntoVenta = () => {
                     </div>    
                     <div className = "post__cardVenta">                    
                         <div className = "post__cardVenta-seccion">
+                                <Search />
                                 <Table 
                                     theme = "themeZebra" 
                                     height = "auto" 

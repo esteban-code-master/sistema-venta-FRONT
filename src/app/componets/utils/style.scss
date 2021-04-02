@@ -93,3 +93,38 @@
 .prueba{
     width: 400px;
 }
+
+
+/*search*/
+
+
+.search {
+    width: 500px;
+    height: 50px;   
+    display: flex;
+}
+
+.search__input{
+    border: 0.5px solid black;
+    flex-grow: 1;    
+    outline: none;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.search__box{
+    border: 0.5px solid black;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#42B3F2;
+    border-radius: 5px;
+}
+
+.search__img{
+    width: 30px;
+}
