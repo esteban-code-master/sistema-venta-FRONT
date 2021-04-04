@@ -1,57 +1,50 @@
 @mixin display ($justify,$align,$direction){
-
     display: flex;
     justify-content: $justify;
     align-items: $align;
-    flex-direction: $direction;
-    flex-wrap: wrap;
+    flex-direction: $direction;   
+    // flex-wrap: wrap;
 }
-
 @mixin textDecorate ($size) {
     color: white;
     font-weight: bold;
     font-size: $size;
 } 
+
 .page{ 
     width: 100%;
-    height: 100vh;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
+    height: 100vh;       
     background: #ECF0F5;
+    @include display(none,none ,column );
+    box-sizing: border-box;
 }
 .post{    
     box-sizing: border-box; 
-    flex-grow: 1;    
-    display: flex;   
-    flex-direction: column;
+    flex-grow: 1;      
+    @include display(none,none ,column );
 }
-.post__menu{    
-    display: flex;
+.post__menu{        
     flex-wrap: wrap;
     padding: 20px;
+    @include display(none,none ,row);
 }
 .post__user-info{  
-    flex-grow: 3;
-    display: flex;
-    justify-content: flex-end;
+    flex-grow: 3;        
+    @include display(flex-end,none,row);
 }
 .post__user--width{   
     width: 300px;     
 }
 .post__menu-buttons{
-    display: flex;   
-    justify-content: space-around;
     flex-grow: 1;
     flex-wrap: wrap;
+    @include display(space-around,none ,row);
 }
 .post__cardVenta{     
     border-top: 5px solid #A52800; 
-    flex-grow: 1;     
-    display: flex;  
-    flex-direction: column;
-    justify-content: flex-end;
+    flex-grow: 1;             
     background: white;
+    @include display(flex-end,none ,column );
 }
 .post__tabla{
     background: #A52800;
@@ -69,17 +62,15 @@
 .post__cardVenta-cantidad{
     @include textDecorate(40px)
 }
-.post__cardVenta-search{  
-    display: flex;
+.post__cardVenta-search{    
     padding: 20px;
     height: 40px;   
-  
+    @include display(none,none,row);
 }
 .post__cardVenta-button{    
     padding: 10px;
-    display: flex;    
-    flex-direction: row-reverse;
     overflow-x: auto;    
+    @include display(none,none ,row-reverse);
     div{
         margin-left: 10px;
     }
@@ -87,10 +78,8 @@
 .post__cardVenta-button::-webkit-scrollbar{
     display: none ;
 }
-.post_box{  
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.post_box{      
+    @include display(center,center,row );
 }
 
 @media (max-width: 900px) { 

@@ -81,7 +81,7 @@ const TemplatePuntoVenta = () => {
                             </div>
                             <div>
                                 <Table 
-                                        theme = "themeZebra" 
+                                        theme = "themeWhite" 
                                         height = "260px" 
                                         title = {title}
                                         row = {row}
