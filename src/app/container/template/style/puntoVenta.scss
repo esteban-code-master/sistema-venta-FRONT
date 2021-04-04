@@ -11,23 +11,14 @@
     color: white;
     font-weight: bold;
     font-size: $size;
-}
-
-// .page{
-//   display: flex;
-//   flex-direction: column;
-//   position: fixed;
-//   width: 100%;
-//   height: 100vh;
-// }
-
-
+} 
 .page{ 
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    background: #ECF0F5;
 }
 .post{    
     box-sizing: border-box; 
@@ -35,11 +26,24 @@
     display: flex;   
     flex-direction: column;
 }
-.post__menu{
-    
+.post__menu{    
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.post__user-info{  
+    flex-grow: 3;
+    display: flex;
+    justify-content: flex-end;
+}
+.post__user--width{   
+    width: 300px;     
 }
 .post__menu-buttons{
-    display: flex;
+    display: flex;   
+    justify-content: space-around;
+    flex-grow: 1;
+    flex-wrap: wrap;
 }
 .post__cardVenta{     
     border-top: 5px solid #A52800; 
@@ -47,11 +51,11 @@
     display: flex;  
     flex-direction: column;
     justify-content: flex-end;
+    background: white;
 }
-
-.post__cardVenta-seccion{          
-    
-    
+.post__tabla{
+    background: #A52800;
+    flex-grow: 1;
 }
 .post__cardVenta-pie{    
     text-align: right;
@@ -64,4 +68,40 @@
 }
 .post__cardVenta-cantidad{
     @include textDecorate(40px)
+}
+.post__cardVenta-search{  
+    display: flex;
+    padding: 20px;
+    height: 40px;   
+  
+}
+.post__cardVenta-button{    
+    padding: 10px;
+    display: flex;    
+    flex-direction: row-reverse;
+    overflow-x: auto;    
+    div{
+        margin-left: 10px;
+    }
+}
+.post__cardVenta-button::-webkit-scrollbar{
+    display: none ;
+}
+.post_box{  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 900px) { 
+    .post__menu{
+        flex-direction: column-reverse;        
+    }
+    .post__user-info{
+        margin-bottom: 15px;
+    }
+}
+
+.margin-right{
+    margin-right: 10px;
 }

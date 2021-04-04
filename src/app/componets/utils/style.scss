@@ -62,19 +62,20 @@
 
 /*componets buttons*/
 
-.buttonContainer{ 
-    width: 200px;
-    height: 50px;
-    background: crimson;
-    display: flex;
-    padding: 10px;
+.buttonContainer{     
+    height: 40px;     
+    display: flex;    
+    flex-direction: row;
+    padding: 5px 10px 5px 10px;
     border-radius: 10px;
     box-sizing: border-box;
     cursor: pointer;
 }
-
+.defaultColor{
+    background: cadetblue;
+}
 .buttonContainer__icon{
-    width: 50px;    
+    width: 30px;    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,15 +84,14 @@
     width: 100%;
 }
 .buttonContainer__text{
+    margin-left: 10px;
     flex-grow: 1;
+    width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     font-weight: bold;
-}
-.prueba{
-    width: 400px;
 }
 
 
@@ -99,32 +99,37 @@
 
 
 .search {
-    width: 500px;
-    height: 50px;   
+    width: 100%;    
+    height: 40px;   
     display: flex;
 }
 
 .search__input{
-    border: 0.5px solid black;
-    flex-grow: 1;    
+    border: 0.5px solid #929292;   
     outline: none;
     margin-right: 10px;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 15px;
     padding: 10px;
+    flex-grow: 2;
     box-sizing: border-box;
 }
 
 .search__box{
-    border: 0.5px solid black;
-    width: 50px;
+    border: 0.5px solid #929292;      
+    max-width: 45px;  
+    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     background:#42B3F2;
     border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
 }
-
+.search__input:focus-visible{
+    border: 0.5px solid #3c95e9;  
+}
 .search__img{
     width: 30px;
 }

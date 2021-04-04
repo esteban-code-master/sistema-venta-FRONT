@@ -1,12 +1,13 @@
 .buttonAction{
     border: 4px solid #42B3F2;
-    width: 130px;
-    height: 100px;
+    width: 100px;
+    height: 70px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;   
     cursor: pointer; 
+    background: white;
 }
 .buttonAction:hover{
     border: 4px solid #1179b1;
@@ -16,8 +17,9 @@
 }
 
 .buttonAction__box{
-    width: 50%;
+    width: 40px;
 }
 .buttonAction__name{        
     font-weight: bold;
+    font-size: 13px;
 }
