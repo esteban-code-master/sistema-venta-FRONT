@@ -53,8 +53,13 @@ const TemplatePuntoVenta = () => {
     return(
         <React.Fragment>
            <div className =  "page">
-                <div>
-                    <Header />
+                <div className = "page__header">
+                    <span className = "page__title">
+                            Cash Point v2
+                    </span> 
+                    <span className = "page__option">
+                        <Header />
+                    </span>                    
                 </div>            
                 <div className = "post">               
                     <div className = "post__menu">                                       
@@ -79,7 +84,7 @@ const TemplatePuntoVenta = () => {
                                 </span>                                
                                 <Search style= {{maxWidth: "500px"}}/>                                                                
                             </div>
-                            <div>
+                            <div style = {{flexGrow : 1}}>
                                 <Table 
                                         theme = "themeWhite" 
                                         height = "260px" 

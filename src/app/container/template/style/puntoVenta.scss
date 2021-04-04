@@ -18,6 +18,20 @@
     @include display(none,none ,column );
     box-sizing: border-box;
 }
+.page__header{
+    @include display(none,none,row);
+}
+.page__option{
+    flex-grow: 1;
+}
+.page__title{
+    background: #081218;
+    font-weight: bold;
+    font-size: 20px;  
+    color: #B9FFFF;    
+    padding: 15px;
+    @include display(center,center,row)
+}
 .post{    
     box-sizing: border-box; 
     flex-grow: 1;      
@@ -88,6 +102,9 @@
     }
     .post__user-info{
         margin-bottom: 15px;
+    }    
+    .page__title{
+      display: none;     
     }
 }
 
