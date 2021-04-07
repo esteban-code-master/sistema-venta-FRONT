@@ -60,10 +60,67 @@
     }
 }
 
-.categoria {
+.categoria 
+{
     margin: 10px;
     background: cadetblue;
     width: 10%;
     padding: 10px;
     border: 1px solid black;
+}
+.padre
+{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.iconos
+{
+    margin: 10px;
+    width: 150px;
+    height: 90px;
+    box-sizing: border-box;
+    text-align: center;
+    color: blanchedalmond;
+    font-size:large;
+}
+#corte
+{
+    background-color:#069b56;
+}
+#factura
+{
+    background-color:#da4c3b;
+}
+#devoluciones
+{
+    background-color: #5d589d;
+}
+#stock_Aler
+{
+    background-color: #e19215;
+}
+.imagenes
+{
+    float:right;
+    position: sticky;
+    top: 75px;
+}
+.foot
+{
+    position: sticky;
+    top: 880px;
+    background-color: red;
+    width:auto;
+    height: 20px;
+    opacity: 0.2;
+}
+.calculadora
+{
+    float:right;
+    width: 50px;
+    height: 50px;
 }

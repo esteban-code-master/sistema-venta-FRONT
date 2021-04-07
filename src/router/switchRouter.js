@@ -3,14 +3,12 @@ import {Switch,Route} from 'react-router-dom'
 import { Tabla,Tabla2 } from '../app/views/ejemplo/index'
 import {CategoriaView}  from '../app/views/categoria/index'
 import {ConsultarCategoria} from '../app/views/categoria/consultar'
+import {Prueba} from '../app/views/dashboard/actividadesrR'
 import NotFound from '../app/container/template/notFound'
 
 const SwitchRouter = () => {    
     return(       
         <Switch>
-            <Route
-                path = "/app/dashboard"
-            />
             <Route path ="/app/post">    
                 <div id="root-template"></div>              
                <Tabla2 />                              
@@ -23,6 +21,9 @@ const SwitchRouter = () => {
             </Route> 
             <Route path = "/app/consultar" >                                       
                 <ConsultarCategoria />
+            </Route>
+            <Route path = "/app/dashboard">
+                <Prueba/>
             </Route>
             <Route 
                 component = {NotFound}
