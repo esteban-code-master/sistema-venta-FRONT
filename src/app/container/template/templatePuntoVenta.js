@@ -10,48 +10,34 @@ import UserInfo from '../../componets/user/userInfo'
 import Table from '../../componets/utils/table'
 import Button from '../../componets/utils/buttons/index'
 import Search from '../../componets/utils/search/index'
+import Modal from '../../componets/utils/modal/index'
 
 import './style/puntoVenta.scss'
 
 const TemplatePuntoVenta = () => {
      const title = [
-        {column : "CANTIDAD"},        
+        {column : "CANTIDAD"},       
+        {column : "DESCRIPCION"}, 
+        {column : "NOMBRE"}, 
+        {column : "PRECIO"}, 
+        {column : "DESCUENTO"}, 
+        {column : "IMPORTE"}, 
     ]
 
     const row = [        
         [
-            {column:"lm4pgo3m"}
+            {column:"45599"},
+            {column:""},
+            {column:"llaves inglesas"},
+            {column:"$ 3595.00 MXM"},
+            {column:"$ 49389.00 MXM"},
+            {column:"$ 43487476.00 MXM"},
         ]    
-        , [
-            {column:"lm4pgo3m"}
-        ]    
-        , [
-            {column:"lm4pgo3m"}
-        ]    
-        , [
-            {column:"lm4pgo3m"}
-        ]    
-        , [
-            {column:"lm4pgo3m"}
-        ],
-        [
-            {column:"lm4pgo3m"}
-        ]    
-        , [
-            {column:"lm4pgo3m"}
-        ]    
-        , [
-            {column:"lm4pgo3m"}
-        ]    
-        , [
-            {column:"lm4pgo3m"}
-        ]    
-        , [
-            {column:"lm4pgo3m"}
-        ]   
+        
     ]
     return(
         <React.Fragment>
+             <Modal />
            <div className =  "page">
                 <div className = "page__header">
                     <span className = "page__title">
@@ -64,7 +50,9 @@ const TemplatePuntoVenta = () => {
                 <div className = "post">               
                     <div className = "post__menu">                                       
                         <div className = "post__menu-buttons">
-                            <ButtonAction img = {CajaIcon} name = "CAJERO" /> 
+                            <ButtonAction img = {CajaIcon} name = "CAJERO" onClick = {()=>{
+                                   
+                            }} /> 
                             <ButtonAction img = {DevolucionIcon} name = "CAJERO" /> 
                             <ButtonAction img = {CorteIcon} name = "CAJERO" /> 
                         </div>                      
