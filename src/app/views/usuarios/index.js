@@ -1,10 +1,12 @@
 import React from 'react'
 import {Empleados} from '../../api/usuarios/index'
-//se importan las funciones en la carpeta api/usuarios
 
 export const Registro = () => {
      return (
          <div>
+             <div className= "titulo-registro">
+                <label>REGISTRO DE NUEVO EMPLEADO</label>
+             </div>
              <div className= "cuestionario-design" >
                 <label>Nombre(s): </label>
                 <input id="name" type="text" placeholder="Ingresa nombre(s)"/>
@@ -20,12 +22,10 @@ export const Registro = () => {
                 <input id="user" type="text" placeholder="Ingresa usuario"/>
                 <label>Contraseña: </label>
                 <input id="password" type="password" placeholder="Ingresa contraseña"/>
-                <label>Cargo del empleado: </label>
-                <input id="id_rol" type="number" placeholder="Ingresa rol *TEMPORAL*"/>
+                <label>Pendiente el cargo del empleado </label>
              </div>
              <div className = "botones">
                  <button onClick= {procesoDataInput} >REGISTRAR</button>
-                 <button >CANCELAR</button>
              </div>
                 
          </div>
@@ -40,17 +40,16 @@ const procesoDataInput = async () => {
     const email = document.getElementById('email').value;
     const user = document.getElementById('user').value;
     const password = document.getElementById('password').value;
-    const rol = document.getElementById('id_rol').value;
 
     const data = {
-       name: name,
+        name: name,
         ape_father: ape_father,
         ape_mother: ape_mother,
         phone: phone,
         email: email,
         user: user,
         password: password,
-        id_rol: rol
+        id_rol: 1
     }
 
     await Empleados(data)

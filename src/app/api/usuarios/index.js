@@ -5,8 +5,8 @@ import "regenerator-runtime/runtime";
 export const Empleados = async (data) => {
     try 
     {
-        const token = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZEVtcGxlYWRvIjoyLCJuYW1lIjoiZXN0ZWJhbiIsInJvbGUiOjEsIlBvc3QiOjEsImlhdCI6MTYxNTE3Mzk3OX0.z8OOnZFiqqgHt2jRIS1nVgwKN6UTTv1qN3k2XhLnV2M`
-            await fetch(`${config.hostName}/api/empleado`,{
+        const token = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZEVtcGxlYWRvIjozLCJuYW1lIjoibHVpcyIsInJvbGUiOjEsIlBvc3QiOjEsImlhdCI6MTYxNDI4OTIzOH0.B8qIh0fDA51yROkSuaMn_CB56ONFS1EYVvzhDf8evVM`
+            await fetch(`http://localhost:8001/api/empleado`,{
                 method: "POST",
                 headers: {
                     Authorization: `Bearer: ${token}`,

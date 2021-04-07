@@ -4,6 +4,14 @@
     background: cadetblue;
 }
 
+.titulo-registro{
+    padding: 25px 0px 20px 10px; //top right bottom left
+    label{
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
 .cuestionario-design {
     display: flex;
     flex-wrap: wrap;
@@ -11,7 +19,7 @@
     padding: 10px;
     box-sizing: border-box;
     label{
-        
+        margin-top: 10px;
     }
     input {
         width: 100%;
@@ -23,8 +31,9 @@
 .botones{
     padding: 16px;
     box-sizing: border-box;
+    
     button{
-        width: 45%;
+        width: 50%;
         padding: 15px;
         border-radius: 10px;
         outline: none;
@@ -33,6 +42,9 @@
         background: rgb(65, 159, 214);
         font-size: 18px;
         cursor: pointer;
+        margin: 0 auto;
+        display:block;
+        
     }       
 
     button:hover{
