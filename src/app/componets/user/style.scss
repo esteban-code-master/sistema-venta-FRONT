@@ -10,8 +10,8 @@
 }
 
 .menu__info {
-    @include menu(none,15px);
-    @include display(flex-start,flex-start);
+    @include menu(none,10px);    
+    @include display(center,center);    
 }
 .menu__user-icon {
     width: 60px;
@@ -23,7 +23,7 @@
     flex-direction: column;    
     flex-grow: 1;   
     color: white;
-    font-weight: bold;
+    font-weight: bold;  
 }
 .menu_user-status{    
     width: 10px;
@@ -35,4 +35,7 @@
 }
 .menu--text-small{
     font-size: 13px;
+}
+.margin{
+    margin-right: 10px;
 }

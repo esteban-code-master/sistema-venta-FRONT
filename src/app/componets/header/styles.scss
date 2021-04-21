@@ -20,7 +20,7 @@
     }
 }
 .header__icon {
-    width: 30px;        
+    width: 24px;        
 }
 
 .header__fecha {
@@ -35,5 +35,11 @@
 }
 
 .header__idioma {
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px; 
+}
+.header__center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

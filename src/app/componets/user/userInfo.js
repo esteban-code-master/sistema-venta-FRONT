@@ -7,7 +7,7 @@ const UserInfo = (props) => {
 
     return(
     <div className = "menu__info" style = {{background : background}}>
-        <div>
+        <div className = "margin">
             <img className = "menu__user-icon" src={userIcon}/>
         </div>
         <div className = "menu__user-info" style = {{color : color}}>

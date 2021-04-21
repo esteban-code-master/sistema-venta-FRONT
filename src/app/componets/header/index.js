@@ -6,11 +6,18 @@ import configIcon from '../../../public/icon/config.png'
 import postIcon from '../../../public/icon/post.png'
 import notifyIcon from '../../../public/icon/notificacion.png'
 import { Link } from 'react-router-dom'
+import MenuIcon from '@material-ui/icons/Menu';
+import IconButton from '@material-ui/core/IconButton';
 
 const Header = () => {
     return(
-       <div className = "header">         
-            <span className ="header__idioma">
+       <div className = "header">     
+            <span className = "header__center">
+                <IconButton>
+                    <MenuIcon style = {{color: "white"}} />
+                </IconButton>                
+            </span>    
+            <span className ="header__idioma header__center">
                 <Link to = "/app/dashboard">
                     <img className = "header__icon"  src = {mexicoIcon} />
                 </Link>                
