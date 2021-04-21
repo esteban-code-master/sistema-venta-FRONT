@@ -9,11 +9,16 @@ import { Link } from 'react-router-dom'
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
 
-const Header = () => {
+
+const Header = ({Animation}) => {    
     return(
        <div className = "header">     
             <span className = "header__center">
-                <IconButton>
+                <IconButton 
+                    onClick = {()=>{
+                        Animation(true)
+                    }}
+                >
                     <MenuIcon style = {{color: "white"}} />
                 </IconButton>                
             </span>    

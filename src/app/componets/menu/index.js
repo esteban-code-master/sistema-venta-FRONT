@@ -19,7 +19,7 @@ const Menu = () => {
         { url: "/app/cortes",text : "Cortes",icon: <RecentActorsIcon className = "menu_icon-white"/>}
     ]
     return(
-        <React.Fragment>
+        <React.Fragment>                  
             <div className = "menu">
                 <div className = "menu__title">                   
                     <span className = "menu__title-text">Cash Point v2</span>                                        
@@ -41,7 +41,7 @@ const Menu = () => {
                        ])}                        
                    </List>
                 </div>
-            </div>
+            </div>      
         </React.Fragment>
     )
 }
