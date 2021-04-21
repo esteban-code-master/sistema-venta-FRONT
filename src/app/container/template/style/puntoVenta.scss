@@ -2,8 +2,7 @@
     display: flex;
     justify-content: $justify;
     align-items: $align;
-    flex-direction: $direction;   
-    // flex-wrap: wrap;
+    flex-direction: $direction;     
 }
 @mixin textDecorate ($size) {
     color: white;
@@ -105,9 +104,26 @@
     }    
     .page__title{
       display: none;     
-    }
+    }    
 }
 
 .margin-right{
     margin-right: 10px;
+}
+
+.modalCajero{    
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    h3{
+        margin-bottom: 10px;
+    }   
+    padding: 10px;
+}
+
+.modalCajero__button{  
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;  
+    display: flex;    
 }

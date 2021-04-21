@@ -5,7 +5,7 @@ const Search = (props) => {
     return(
         <React.Fragment>
             <div className = "search" style ={style}>
-                <input className = "search__input"  type = "search" placeholder = "Search ..."/>
+                <input className = "search__input"  type = "text" placeholder = "Search ..."/>
                 <span className = "search__box">
                     <img className = "search__img" src = {IconSeaarch} />
                 </span>

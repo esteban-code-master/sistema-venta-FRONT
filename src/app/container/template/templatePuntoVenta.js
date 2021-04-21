@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../../componets/header/index'
 import ButtonAction from '../../componets/box/buttonAction'
 import CajaIcon from '../../../public/icon/cajaIcon.png'
@@ -10,11 +10,13 @@ import UserInfo from '../../componets/user/userInfo'
 import Table from '../../componets/utils/table'
 import Button from '../../componets/utils/buttons/index'
 import Search from '../../componets/utils/search/index'
-import Modal from '../../componets/utils/modal/index'
+// import Modal from '../../componets/utils/modal/index'
+import {Modal,Input,Notify} from '../../componets/utils/index'
 
 import './style/puntoVenta.scss'
 
 const TemplatePuntoVenta = () => {
+    const [visible,setVisible] = useState(false)
      const title = [
         {column : "CANTIDAD"},       
         {column : "DESCRIPCION"}, 
@@ -37,7 +39,25 @@ const TemplatePuntoVenta = () => {
     ]
     return(
         <React.Fragment>
-             <Modal />
+            <Notify />
+            <Modal hidden = {visible} setHidden = {setVisible}>
+                 <div className = "modalCajero">
+                     <h3>BIENVENIDO</h3>
+                    <Input                     
+                        className = "borderOne"
+                        style = {{
+                            width : "100%"                        
+                        }}
+                        placeholder = "ingrese usuario"                        
+                    />
+                    <div className = "modalCajero__button">                          
+                        <Button 
+                                    icon = {IconPagar}
+                                    name = {"INGRESAR"}
+                        />                                                                                                             
+                    </div>                                
+                 </div>                
+            </Modal>          
            <div className =  "page">
                 <div className = "page__header">
                     <span className = "page__title">
@@ -51,7 +71,7 @@ const TemplatePuntoVenta = () => {
                     <div className = "post__menu">                                       
                         <div className = "post__menu-buttons">
                             <ButtonAction img = {CajaIcon} name = "CAJERO" onClick = {()=>{
-                                   
+                                   setVisible(true)                                 
                             }} /> 
                             <ButtonAction img = {DevolucionIcon} name = "CAJERO" /> 
                             <ButtonAction img = {CorteIcon} name = "CAJERO" /> 
@@ -85,16 +105,18 @@ const TemplatePuntoVenta = () => {
                             <div className = "post__cardVenta-button">
                                 <Button 
                                         icon = {IconPagar}
-                                        name = {"DEPOSITAR"}
-                                        style = {{background : "red"}}
+                                        name = {"PAGAR"}
+                                        style = {{background: "#E9D100"}}
                                 />                                                               
                                  <Button 
                                         icon = {IconPagar}
                                         name = {"DEPOSITAR"}
+                                        style = {{background: "#6BB6A4"}}
                                 />
                                   <Button 
                                         icon = {IconPagar}
-                                        name = {"DEPOSITAR"}
+                                        name = {"RETIRAR"}
+                                        style = {{background : "#EEB988"}}
                                 />
                             </div>                                               
                         </div>
