@@ -31,7 +31,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack serve --mode development  --port 3000  --open",
+    "dev": "webpack serve --mode development  --port 5000  --open",
     "prod": "webpack --mode production"
   },
   "keywords": [],
